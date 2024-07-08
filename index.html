@@ -6,17 +6,17 @@
 <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
 <meta name="referrer" content="no-referrer">
-<script>//<link rel="manifest" href="manifest.webmanifest?v=20240702045528"></script>
-<link rel="stylesheet" href="CSS/Common.css?v=20240702045528">
-<link rel="stylesheet" href="CSS/Stable.css?v=20240702045528">
-<link rel="stylesheet" href="CSS/auth_module.css?v=20240702045528">
-<link rel="stylesheet" href="CSS/Buttons.css?v=20240702045528">
-<link rel="stylesheet" href="CSS/AppearOpts.css?v=20240702045528">
-<link rel="stylesheet" href="CSS/Resource.css?v=20240702045528">
-<link rel="stylesheet" href="CSS/contextMenu.css?v=20240702045528">
-<link rel="stylesheet" href="CSS/styles.css?v=20240702045528">
+
+
+<link rel="stylesheet" href="CSS/Common.css?v=20240707202844">
+<link rel="stylesheet" href="CSS/Stable.css?v=20240707202844">
+<link rel="stylesheet" href="CSS/auth_module.css?v=20240707202844">
+<link rel="stylesheet" href="CSS/Buttons.css?v=20240707202844">
+<link rel="stylesheet" href="CSS/AppearOpts.css?v=20240707202844">
+<link rel="stylesheet" href="CSS/Resource.css?v=20240707202844">
+<link rel="stylesheet" href="CSS/contextMenu.css?v=20240707202844">
 	<title>Adjuster Console</title>
-<script>//<link rel="icon" type="image/x-icon" href="icon512_rounded.png?v=20240702045528"></script>
+<link rel="manifest" href="manifest.webmanifest?v=20240707202844">
 <style>
 
 /*Restricted Use License
@@ -162,8 +162,6 @@ body {
   --fancy-dark: #6d7174;
   --fancy-background: #B6BDC1;
   --div-width: 10px;
-  --button-background: linear-gradient(315deg, var(--fancy-meddark), var(--fancy-medlight));
-  --button-box-shadow: -5px -5px 16px var(--fancy-dark), 5px 5px 16px var(--fancy-light);
 }
 
 </style>
@@ -325,214 +323,79 @@ body {
 
                                                 <!-- Appearance Settings -->
 
-<div id="appearDiv" class="backing" style='display:none'>
-<div class="container" id="OutputOuter">
-  <h1>Mutare Expositionem</h1>
-  <div class="input-group nameInputDiv">
+<div id="appearDiv" style="display:none;" class="backing">
+  <div id="BGpick" class="noShow">
+    <label for="background-picker">Page Background color:</label><br>
+    <input id="background-picker" type="color">
+  </div>
+  <div id="ACpick" class="noShow">
+    <label for="accent-picker">Page Accent Color:</label><br>
+    <input id="accent-picker" type="color">
+  </div>
+  <div id="shad2Pick" class="noShow">
+    <label for="shad2-picker">Gradient Start:</label><br>
+    <input id="shad2-picker" type="color">
+  </div>
+  <div id="shad3Pick" class="noShow">
+    <label for="shad3-picker">Gradient End:</label><br>
+    <input id="shad3-picker" type="color">
+  </div>
+  <div id="shad1Pick" class="noShow">
+    <label for="shad1-picker">Highlight: </label><br>
+    <input id="shad1-picker" type="color">
+  </div>
+  <div id="shad4Pick" class="noShow">
+    <label for="shad4-picker">Shadow: </label><br>
+    <input id="shad4-picker" type="color">
+  </div>
+  <div id="secondaries" class="noShow">
+  <div id="bg2Pick" class="noShow">
+    <label for="bg2-picker">Secondary Background Color:</label><br>
+    <input id="bg2-picker" type="color">
+  </div>
+  <div id="flPick" class="noShow">
+    <label for="fl-picker">Secondary Highlight:</label><br>
+    <input id="fl-picker" type="color">
+  </div>
+  <div id="fdPick" class="noShow">
+    <label for="fd-picker">Secondary Shadow:</label><br>
+    <input id="fd-picker" type="color">
+  </div>
+  <div id="mlPick" class="noShow">
+    <label for="ml-picker">Seccondary Gradient Start:</label><br>
+    <input id="ml-picker" type="color">
+  </div>
+  <div id="mdPick" class="noShow">
+    <label for="md-picker">Seccondary Gradient End:</label><br>
+    <input id="md-picker" type="color" value="#a4aaae">
+  </div>
+  </div>
+  <div id="nameLabelDiv" class="noShow">
     <label for="userName">Your Name:</label><br>
     <input type="text" id="userName"><br>
   </div>
-  <div class="input-group">
-    <label for="baseColor">Background Color</label>
-    <div class="picker-inputs">
-      <input id="background-picker" type="color">
-    </div>
-    <div class="hex-input">
-      <input type="text" id="baseColor" placeholder="Enter hex color" value="#2D4252">
-    </div>
-    <div class="rgb-inputs">
-      <input type="text" id="redInput" placeholder="R" maxlength="3">
-      <input type="text" id="greenInput" placeholder="G" maxlength="3">
-      <input type="text" id="blueInput" placeholder="B" maxlength="3">
-    </div>
+  <div id="namecolorLabelDiv" class="noShow">
+    <label for="nameColor">Text Color:</label><br>
+    <input id="nameColor" type="color">
   </div>
-  <div class="input-group" style="margin-top: 15px;">
-    <label for="baseColor2">Background Color2</label>
-    <div class="picker-inputs">
-      <input id="bg2-picker" type="color">
-    </div>
-    <div class="hex-input">
-      <input type="text" id="baseColor2" placeholder="Enter hex color" value="#7D92A2">
-    </div>
-    <div class="rgb-inputs">
-       <input type="text" id="redInput2" placeholder="R" maxlength="3">
-        <input type="text" id="greenInput2" placeholder="G" maxlength="3">
-        <input type="text" id="blueInput2" placeholder="B" maxlength="3">
-     </div>
-   </div>
-    <div class="color-box-box">
-      <div class="box">
-        <label for="shad1-picker">1Highlight</label>
-        <input id="shad1-picker" type="color">
-        <div class="color" id="color1" style="display:none;">
-          <div class="color-name" id="colorName1" style="opacity:0;"></div>
-        </div>
-      </div>
-      <div class="box">
-        <label for="shad2-picker">1Gradient1</label>
-        <input id="shad2-picker" type="color">
-        <div class="color" id="color3" style="display:none;">
-          <div class="color-name" id="colorName3" style="opacity:0;"></div>
-        </div>
-      </div>
-      <div class="box">
-        <label for="shad3-picker">1Gradient2</label>
-        <input id="shad3-picker" type="color">
-        <div class="color" id="color4" style="display:none;">
-          <div class="color-name" id="colorName4" style="opacity:0;"></div>
-        </div>
-      </div>
-      <div class="box">
-        <label for="shad4-picker">1Shadow</label>
-        <input id="shad4-picker" type="color">
-        <div class="color" id="color2" style="display:none;">
-          <div class="color-name" id="colorName2" style="opacity:0;"></div>
-        </div>
-      </div>
-
-      <div class="box">
-        <label for="fl-picker">2Highlight</label>
-        <input id="fl-picker" type="color">
-        <div class="color" id="color1a" style="display:none;">
-          <div class="color-name" id="colorName1a" style="opacity:0;"></div>
-        </div>
-      </div>
-      <div class="box">
-        <label for="ml-picker">2Gradient1</label>
-        <input id="ml-picker" type="color">
-        <div class="color" id="color3a" style="display:none;">
-          <div class="color-name" id="colorName3a" style="opacity:0;"></div>
-        </div>
-      </div>
-      <div class="box">
-        <label for="md-picker">2Gradient2</label>
-        <input id="md-picker" type="color">
-        <div class="color" id="color4a" style="display:none;">
-          <div class="color-name" id="colorName4a" style="opacity:0;"></div>
-        </div>
-      </div>
-      <div class="box">
-        <label for="fd-picker">2Shadow</label>
-        <input id="fd-picker" type="color">
-        <div class="color" id="color2a" style="display:none;">
-          <div class="color-name" id="colorName2a" style="opacity:0;"></div>
-        </div>
-      </div>
-      <div class="box">
-        <label for="accent-picker">Accent:</label>
-        <input id="accent-picker" type="color">
-      </div>
-      <div class="box">
-        <label for="nameColor">Text</label>
-        <input id="nameColor" type="color">
-      </div>
-      <div class="box">
-        <label for="outlineColor">Outline</label>
-        <input id="outlineColor" type="color">
-      </div>
-      <div class="box">
-        <label for="nameGlow">Glow</label>
-        <input id="nameGlow" type="color">
-      </div>
-    </div>
-      <div class="css-wrapper">
-        <div class="css-property">
-          <label for="xOffset">X-Offset</label>
-          <div class="input-with-buttons">
-            <button id="xOffsetDecrement">-</button>
-            <input type="number" id="xOffset" value="0">
-            <button id="xOffsetIncrement">+</button>
-          </div>
-        </div>
-        <div class="css-property">
-          <label for="yOffset">Y-Offset</label>
-          <div class="input-with-buttons">
-            <button id="yOffsetDecrement">-</button>
-            <input type="number" id="yOffset" value="0">
-           <button id="yOffsetIncrement">+</button>
-          </div>
-        </div>
-        <div class="css-property">
-          <label for="blur">Blur:</label>
-          <div class="input-with-buttons">
-            <button id="blurDecrement">-</button>
-            <input type="number" id="blur" value="0">
-            <button id="blurIncrement">+</button>
-          </div>
-        </div>
-        <div class="css-property">
-          <label for="spread">Spread:</label>
-          <div class="input-with-buttons">
-            <button id="spreadDecrement">-</button>
-            <input type="number" id="spread" value="0">
-            <button id="spreadIncrement">+</button>
-          </div>
-        </div>
-        <div class="css-property">
-          <label for="size">Size:</label>
-          <div class="input-with-buttons">
-            <button id="sizeDecrement">-</button>
-            <input type="number" id="size" value="">
-            <button id="sizeIncrement">+</button>
-          </div>
-        </div>
-        <div class="css-property">
-          <label for="radius">Radius:</label>
-          <div class="input-with-buttons">
-            <button id="radiusDecrement">-</button>
-            <input type="number" id="radius" value="8">
-            <button id="radiusIncrement">+</button>
-          </div>
-        </div>
-      </div> 
-      <div class="slider-container">
-        <div class="slider-inner">
-          <div class="slider-left">
-            <label for="intensitySlider">Color Intensity:</label>
-            <input type="range" class="slider" id="intensitySlider" min="0" max="100" value="0">
-          </div>
-          <div class="slider-right">
-            <label for="secondaryIntensitySlider">Shape Intensity:</label>
-            <input type="range" class="slider" id="secondaryIntensitySlider" min="0" max="100" value="50">
-          </div>
-        </div>
-      </div>
-      <div class="checkboxToggles">
-        <div class="switches">
-          <label class="switch"><input type="checkbox" id="backgroundToggle" checked><span class="slider1 round"></span><span class="spacer">Use Linear Gradient</span></label>
-        </div>
-        <div class="switches">
-          <label class="switch"><input type="checkbox" id="shadowToggle" checked><span class="slider1 round"></span><span class="spacer">Generate Two Shadows</span></label>
-        </div>
-      </div>
-      <div class="button-class">
-        <button id="saveButton" class="isButtons">Save</button>
-        <button id="loadButton" class="isButtons">Load</button>
-        <button id="clearButton" class="isButtons">Clear Mem</button>
-      </div>
-      <div class="modifier-buttons">
-          <button id="swapButton" class="isButtons">Swap</button>
-          <button id="boostButton" class="isButtons">Boost</button>
-          <button id="switchButton" class="isButtons">Switch</button>
-      </div>
-        <div class="output-box si" id="OutputInner"></div>
-        <div class="output-box sino" id="OutputInner2"></div>
-      </div>
-      <div id="presetButtonDiv" class="presetButtonClass">
-        <button id="defaultColors" class="isButtons" onclick="setColor('default',false)">Original</button>
-        <button id="presetGrey" class="isButtons" onclick="setColor('grey',false)">Grey</button>
-        <button id="presetRed" class="isButtons" onclick="setColor('red',false)">Red</button>
-        <button id="presetGreen" class="isButtons" onclick="setColor('green',false)">Green</button>
-        <button id="presetPink" class="isButtons" onclick="setColor('pink',false)">Pink</button>
-        <button id="ConsoleDefault" class="isButtons" onclick="setColor('ACDF',false)">Choice</button>
-      </div>
-      <div id="controlButtonDiv" class="controlButtonClass">
-        <button id="setColors" class="isButtons controllers" onclick="saveColors()">Save and Exit</button>
-        <button id="exitColor" class="isButtons controllers" onclick="exitColor()">Exit</button>
-      </div>
-
-
+  <div id="nameOutlineDiv" class="noShow">
+    <label for="outlineColor">Outline Color:</label><br>
+    <input id="outlineColor" type="color">
   </div>
+  <div id="glowLabelDiv" class="noShow">
+    <label for="nameGlow">Glow Color:</label><br>
+    <input id="nameGlow" type="color">
+  </div>
+  <button id="setColors" class="picker" onclick="saveColors()">Save and Exit</button>
+  <button id="exitColor" class="picker" onclick="exitColor()">Exit</button>
+  <button id="defaultColors" class="picker" onclick="setColor('default')">Default Preset</button>
+  <button id="presetGrey" class="picker" onclick="setColor('grey')">Grey Preset</button>
+  <button id="presetRed" class="picker" onclick="setColor('red')">Red Preset</button>
+  <button id="presetGreen" class="picker" onclick="setColor('green')">Green Preset</button>
+  <button id="presetPink" class="picker" onclick="setColor('pink')">Pink Preset</button>
+  <button id="ConsoleDefault" class="picker" onclick="setColor('ACDF')">Console Clrs</button>
+
+</div>
 
                                               <!-- Main Buttons -->
 
@@ -878,7 +741,6 @@ body {
     </div>
   </div>
 </div>
-
 
                                                 <!-- Old Auth Note -->
 
@@ -2594,18 +2456,17 @@ TIME:&nbsp&nbsp</textarea>
   <button id="sizeCancel" class="bones" onclick="sizeSubmit()">Exit</button>
 </div>
 <div id="pdiv" class="noShow"><p></div>
-
-<script>// type="module" src="JavaScript/firebase.js?v=20240702045528"</script>
-<script>// type="module" src="JavaScript/script.js?v=20240702045528"</script>
-<script src="JavaScript/snipDiv.js?v=20240702045528"></script>
-<script src="JavaScript/keyEvents.js?v=20240702045528"></script>
-<script src="JavaScript/OGLAYOUTJS.js?v=20240702045528"></script>
-<script src="JavaScript/dual_claim_authorization.js?v=20240702045528"></script>
-<script src="JavaScript/ChangeAppearance2.js?v=20240702045528"></script>
-<script src="JavaScript/commonScript.js?v=20240702045528"></script>
-<script src="JavaScript/jsonParse.js?v=20240702045528"></script>
-<script src="JavaScript/ContextMenu.js?v=20240702045528"></script>
-<script src="JavaScript/laborRate.js?v=20240702045528"></script>
-<script src="JavaScript/trackerScript.js?v=20240702045528"></script>
+<script type="module" src="JavaScript/firebase.js?v=20240707202844"></script>
+<script type="module" src="JavaScript/script.js?v=20240707202844"></script>
+<script src="JavaScript/snipDiv.js?v=20240707202844"></script>
+<script src="JavaScript/keyEvents.js?v=20240707202844"></script>
+<script src="JavaScript/OGLAYOUTJS.js?v=20240707202844"></script>
+<script src="JavaScript/dual_claim_authorization.js?v=20240707202844"></script>
+<script src="JavaScript/ChangeAppearance2.js?v=20240707202844"></script>
+<script src="JavaScript/commonScript.js?v=20240707202844"></script>
+<script src="JavaScript/jsonParse.js?v=20240707202844"></script>
+<script src="JavaScript/ContextMenu.js?v=20240707202844"></script>
+<script src="JavaScript/laborRate.js?v=20240707202844"></script>
+<script src="JavaScript/trackerScript.js?v=20240707202844"></script>
 </body>
 </html>
