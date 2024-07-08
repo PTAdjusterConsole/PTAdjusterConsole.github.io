@@ -69,8 +69,8 @@ button {
   border: none;
   border-radius: 15px;
   color: var(--glow-txt-color);
-  background: var(--button-background);
-  box-shadow:  var(--button-box-shadow);
+  background: linear-gradient(145deg, var(--my-shadow-color3), var(--my-shadow-color2));
+  box-shadow:  2px 2px 6px var(--my-shadow-color4), -2px -2px 6px var(--my-shadow-color1);
   text-shadow:
     1px 1px 1px var(--glow-outline-color),
    -1px -1px 1px var(--glow-outline-color),
@@ -129,25 +129,6 @@ div#original.default button.orig {
   border-right: none;
 }
 
-.pickerlabel {
-  color: var(--glow-txt-color);
-  text-shadow:
-    1px 1px 1px var(--glow-outline-color),
-   -1px -1px 1px var(--glow-outline-color),
-   -1px 1px 1px var(--glow-outline-color),
-    1px -1px 1px var(--glow-outline-color);
-}
-
-#presetBtn {
-  position: absolute;
-  display: inline-block;
-  bottom: 5px;
-  left: 5px;
-  padding: 14px 18px;
-  border-bottom: none;
-  border-left: none;
-}
-
 #exitColor {
   position: absolute;
   display: inline-block;
@@ -161,52 +142,58 @@ div#original.default button.orig {
 #defaultColors {
   position: absolute;
   display: inline-block;
-  top: 530px;
-  left: 65px;
+  top: 515px;
+  left: 90px;
 }
 
 #presetGrey {
   position: absolute;
   display: inline-block;
-  top: 580px;
-  left: 65px;
+  top: 565px;
+  left: 90px;
 }
 
 #presetRed {
   position: absolute;
   display: inline-block;
-  top: 630px;
-  left: 65px;
+  top: 615px;
+  left: 90px;
 }
 
 #presetGreen {
   position: absolute;
   display: inline-block;
-  top: 680px;
-  left: 65px;
+  top: 665px;
+  left: 90px;
 }
 
 #presetPink {
   position: absolute;
   display: inline-block;
-  top: 730px;
-  left: 65px;
+  top: 715px;
+  left: 90px;
 }
 
 #ConsoleDefault {
   position: absolute;
   display: inline-block;
-  top: 780px;
-  left: 65px;
+  top: 765px;
+  left: 90px;
+}
+
+#shadMaker {
+  position: absolute;
+  display: inline-block;
+  top: 815px;
+  left: 90px;
 }
 
 #appearDiv {
-  background: var(--my-background-color);
-  font-size: 16px;
-  top: 10px;
-  left: 10px;
-  height: 95%;
-  width: 95%;
+  font-size: 18px;
+  top: 15px;
+  left: 150px;
+  height: 870px;
+  width: 600px;
   position: absolute;
   display: inline-block;
   padding: 15px;
@@ -218,7 +205,7 @@ div#original.default button.orig {
   display: inline-block;
   margin: 0px;
   top: 25px;
-  left: -40px;
+  left: 10px;
   width: 300px;
   text-align: center;
 }
@@ -228,7 +215,7 @@ div#original.default button.orig {
   display: inline-block;
   margin: 0px;
   top: 110px;
-  left: -40px;
+  left: 10px;
   width: 300px;
   text-align: center;
 }
@@ -238,7 +225,7 @@ div#original.default button.orig {
   display: inline-block;
   margin: 0px;
   top: 195px;
-  left: -40px;
+  left: 10px;
   width: 300px;
   text-align: center;
 }
@@ -248,7 +235,7 @@ div#original.default button.orig {
   display: inline-block;
   margin: 0px;
   top: 280px;
-  left: -40px;
+  left: 10px;
   width: 300px;
   text-align: center;
 }
@@ -258,7 +245,7 @@ div#original.default button.orig {
   display: inline-block;
   margin: 0px;
   top: 365px;
-  left: -40px;
+  left: 10px;
   width: 300px;
   text-align: center;
 }
@@ -268,7 +255,7 @@ div#original.default button.orig {
   display: inline-block;
   margin: 0px;
   top: 450px;
-  left: -40px;
+  left: 10px;
   width: 300px;
   text-align: center;
 }
@@ -278,7 +265,7 @@ div#original.default button.orig {
   display: inline-block;
   margin: 0px;
   top: 25px;
-  right: -20px;
+  right: 10px;
   width: 300px;
   text-align: center;
 }
@@ -288,27 +275,7 @@ div#original.default button.orig {
   display: inline-block;
   margin: 0px;
   top: 110px;
-  right: -20px;
-  width: 300px;
-  text-align: center;
-}
-
-#mlPick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 195px;
-  right: -20px;
-  width: 300px;
-  text-align: center;
-}
-
-#mdPick {
-  position: absolute;
-  display: inline-block;
-  margin: 0px;
-  top: 280px;
-  right: -20px;
+  right: 10px;
   width: 300px;
   text-align: center;
 }
@@ -317,8 +284,28 @@ div#original.default button.orig {
   position: absolute;
   display: inline-block;
   margin: 0px;
+  top: 195px;
+  right: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#mlPick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
+  top: 280px;
+  right: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+#mdPick {
+  position: absolute;
+  display: inline-block;
+  margin: 0px;
   top: 365px;
-  right: -20px;
+  right: 10px;
   width: 300px;
   text-align: center;
 }
@@ -328,7 +315,7 @@ div#original.default button.orig {
   display: inline-block;
   margin: 0px;
   top: 450px;
-  right: -20px;
+  right: 10px;
   width: 300px;
   text-align: center;
 }
@@ -338,7 +325,7 @@ div#original.default button.orig {
   display: inline-block;
   margin: 0px;
   top: 535px;
-  right: -20px;
+  right: 10px;
   width: 300px;
   text-align: center;
 }
@@ -348,7 +335,7 @@ div#original.default button.orig {
   display: inline-block;
   margin: 0px;
   top: 620px;
-  right: -20px;
+  right: 10px;
   width: 300px;
   text-align: center;
 }
@@ -359,263 +346,6 @@ div#original.default button.orig {
   margin: 0px;
   width: 300px;
   top: 705px;
-  right: -20px;
+  right: 10px;
   text-align: center;
-}
-
-.input-with-buttons {
-  display: block;
-}
-
-.input-with-buttons button {
-  padding: 5px 10px;
-  font-size: 14px;
-  cursor: pointer;
-  background-color: #ddd;
-  border: none;
-  outline: none;
-  border-radius: 4px
-}
-
-.input-with-buttons button:hover {
-  background-color: #ccc;
-}
-
-#shadControls {
-  display: inline-block;
-  position: absolute;
-  bottom: 50px;
-  left: 70px;
-  width: 80px;
-  height: 350px;
-}
-
-#xOffsetDecrement {
-  display: inline-block;
-  position: relative;
-  left: 0px;
-  top: 15px;
-}
-
-#xOffsetIncrement {
-  display: inline-block;
-  position: relative;
-  right: 0px;
-  top: 15px;
-  margin-left: 5px;
-}
-
-
-#yOffsetDecrement {
-  display: inline-block;
-  position: relative;
-  left: 0px;
-  top: 15px;
-}
-
-#yOffsetIncrement {
-  display: inline-block;
-  position: relative;
-  right: 0px;
-  top: 15px;
-  margin-left: 5px;
-}
-
-
-#blurIncrement {
-  display: inline-block;
-  position: relative;
-  right: 0px;
-  top: 15px;
-  margin-left: 5px;
-}
-
-#blurDecrement {
-  display: inline-block;
-  position: relative;
-  left: 0px;
-  top: 15px;
-}
-
-
-#spreadIncrement {
-  display: inline-block;
-  position: relative;
-  right: 0px;
-  top: 15px;
-  margin-left: 5px;
-}
-
-#spreadDecrement {
-  display: inline-block;
-  position: relative;
-  left: 0px;
-  top: 15px;
-}
-
-.css-property {
-  display: inline-block;
-  width: 100px;
-}
-
-#xo {
-  display: inline-block;
-  position: absolute;
-  top: 0px;
-  left: 5px;
-}
-
-#yo {
-  display: inline-block;
-  position: absolute;
-  top: 70px;
-  left: 5px;
-}
-
-#bl {
-  display: inline-block;
-  position: absolute;
-  top: 140px;
-  left: 5px;
-}
-
-#sp {
-  display: inline-block;
-  position: absolute;
-  top: 210px;
-  left: 5px;
-}
-
-.slider-container {
-  position: absolute;
-  bottom: 430px;
-  right: 350px;
-  width: 30%;
-  height: auto;
-}
-
-.slider-inner {
-  display: block;
-  height: 80px;
-  width: 100%;
-}
-
-.slider-left {
-  position: static;
-  display: block;
-  width: 100%;
-}
-
-.slider-right {
-  position: static;
-  display: block;
-  width: 100%;
-}
-
-.slider {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 90%;
-  height: 8px;
-  border-radius: 5px;
-  background: #d3d3d3;
-  outline: none;
-  opacity: 0.7;
-  transition: opacity .15s ease-in-out;
-  margin-bottom: 15px;
-}
-
-.slider:hover {
-  opacity: 1;
-}
-
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #4CAF50;
-  cursor: pointer;
-}
-
-.slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #4CAF50;
-  cursor: pointer;
-}
-
-.isButtons {
-  font-size: 16px;
-  padding: 10px 15px;
-  border-radius: 5px;
-  border: 2px solid black;
-  background: rgba(0,0,0,.3);
-  color: white;
-  text-shadow:
-    1px 1px 1px black,
-    -1px -1px 1px black,
-    -1px 1px 1px black,
-    1px -1px 1px black;
-&:hover {
-  background: rgba(0,0,0,.5);
-  }
-&:active {
-  transform: scale(.98);
-  }
-}
-
-#swapButton {
-  position: relative;
-  top: 100px;
-  left: 45px;
-}
-
-#boostButton {
-  position: relative;
-  top: 100px;
-  left: 70px;
-}
-
-.sliderLabel {
-  display: block;
-}
-
-input.slider {
-  display: inline-block;
-  position: static;
-}
-
-input.slider::before {
-  display: none;
-}
-
-.output-box {
-  display: block;
-  height:  80px;
-  width:  160px;
-  top: 200px;
-  left: 350px;
-  position: absolute;
-  display: inline-block;
-  border-radius: 8px;
-}
-
-.boxCheck {
-  position: absolute;
-  display: inline-block;
-  top: 60px;
-  left: 330px;
-}
-
-.button-class {
-  position: absolute;
-  bottom: 70px;
-  left: 220px;
-}
-
-.lowerButtons {
-  position: relative;
 }
